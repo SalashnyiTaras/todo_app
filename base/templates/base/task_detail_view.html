@@ -1,0 +1,42 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<div class="header-bar">
+    <h1>{{ task.title }}</h1>
+    <a href="{% url 'tasks' %}">&#8592; Back</a>
+</div>
+
+<div class="container2">
+    {% if task.author == user %}
+        <a href="{% url 'task-update' task.id %}">Edit</a>
+        <a href="{% url 'task-delete' task.id %}">Delete</a>
+    {% endif %}
+
+    {% if task.author %}
+        <h3>Task author:</h3><h4>{{ task.author }}</h4>
+    {% endif %}
+
+    {% if task.description %}
+        <h3>Description:</h3><h4>{{ task.description }}</h4>
+    {% endif %}
+
+    <h3>People in charge:</h3>
+    {% if task.responsible %}
+        {% for person in task.responsible.all %}
+            <h4>{{person}}</h4>
+        {% endfor %}
+    {% endif %}
+
+    {% if task.completed %}
+        <h3>Task completed:</h3><h4>{{ task.completed }}</h4>
+    {% endif %}
+
+    {% if task.updated %}
+        <h3>Last time updated:</h3><h4>{{ task.updated }}</h4>
+    {% endif %}
+
+    {% if task.image %}
+        <img src="{{task.image.url}}">
+    {% endif %}
+</div>
+{% endblock %}
