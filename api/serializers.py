@@ -12,8 +12,8 @@ import base.models
 class TaskSerializer(serializers.ModelSerializer):
     """ A class which provides serialization of models' data. Class is inherited from serializers.ModelSerializer
 
-    Attributes:
-    -----------
+    Attributes
+    ----------
     model : object
         a model to be serialized
     fields : str/list

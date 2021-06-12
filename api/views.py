@@ -23,12 +23,10 @@ def api_overview(request):
     ----------
     api_view : list
         takes http methods which will be interpreted as allowed upon current function
-
     Parameters
     -----------
     request : object
         sent by client to trigger response from projects' API
-
     Returns
     -------
     Response
@@ -51,12 +49,10 @@ def task_list(request):
     ----------
     api_view : list
         takes http methods which will be interpreted as allowed upon current function
-
     Parameters
     -----------
     request : object
         sent by client to trigger response from projects' API
-
     Returns
     -------
     Response
@@ -77,14 +73,12 @@ def task_details(request, pk):
     ----------
     api_view : list
         takes http methods which will be interpreted as allowed upon current function
-
     Parameters
     -----------
     request : object
         sent by client to trigger response from projects' API
     pk : int
         primary key/id of a particular object of Task model
-
     Returns
     -------
     Response

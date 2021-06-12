@@ -11,7 +11,7 @@ from django.apps import AppConfig
 class ApiConfig(AppConfig):
     """ A class used to register api app in projects' settings. Class inherits from AppConfig.
 
-    Attributes:
+    Attributes
     ----------
     default_auto_field : str
         defines apps' auto field
